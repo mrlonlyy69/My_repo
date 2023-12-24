@@ -1,12 +1,26 @@
 #!/bin/bash
 
+#banner
 banner(){
-    echo "********************"
+    echo ""
+    echo ""
+    
+    
+    echo "****  Created by  ****"
     echo "*                    *"
-    echo "*     mr._.lonlyy    *"
+    echo "*    mr._.lonlyy     *"
     echo "*                    *"
-    echo "****  Sayam  *****"
-}
+    echo "****    Sayam     ****"
+    
+    echo ""
+    echo ""
+    }
+    
+# Check for root privilege
+if [[ $EUID -ne 0 ]]; then
+    echo "This script must be run as root." 
+    exit 1
+fi
 
 message (){
     echo ""

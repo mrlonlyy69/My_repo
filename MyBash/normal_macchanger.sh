@@ -1,11 +1,24 @@
 #!/bin/bash
-
-#Check root
-
+#banner
+    echo ""
+    echo ""
+    
+    
+    echo "****  Created by  ****"
+    echo "*                    *"
+    echo "*    mr._.lonlyy     *"
+    echo "*                    *"
+    echo "****    Sayam     ****"
+    
+    echo ""
+    echo ""
+    
+# Check for root privilege
 if [[ $EUID -ne 0 ]]; then
-echo "This script must run as root"
-exit
+    echo "This script must be run as root." 
+    exit 1
 fi
+
 
 #Change mac address
 
